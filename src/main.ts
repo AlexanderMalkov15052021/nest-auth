@@ -21,6 +21,7 @@ import { parseBoolean } from './libs/common/utils/parse-boolean.util'
  * @returns {Promise<void>} Промис, который разрешается, когда приложение запущено.
  */
 async function bootstrap() {
+	
 	const app = await NestFactory.create(AppModule)
 
 	const config = app.get(ConfigService)
