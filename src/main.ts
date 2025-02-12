@@ -34,6 +34,7 @@ async function bootstrap() {
 		})
 	)
 
+	
 	app.use(
 		(session as any)({  // ругается vercel без as any
 			// Настройки управления сессиями с использованием Redis
