@@ -2,8 +2,8 @@ import { ValidationPipe } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import { NestFactory } from '@nestjs/core'
 import RedisStore from 'connect-redis'
-import cookieParser from 'cookie-parser'
-import session from 'express-session'
+import * as cookieParser from 'cookie-parser'
+import * as session from 'express-session'
 import IORedis from 'ioredis'
 
 import { AppModule } from './app.module'
@@ -21,7 +21,6 @@ import { parseBoolean } from './libs/common/utils/parse-boolean.util'
  * @returns {Promise<void>} Промис, который разрешается, когда приложение запущено.
  */
 async function bootstrap() {
-	
 	const app = await NestFactory.create(AppModule)
 
 	const config = app.get(ConfigService)
