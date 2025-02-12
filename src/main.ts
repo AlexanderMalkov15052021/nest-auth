@@ -3,7 +3,7 @@ import { ConfigService } from '@nestjs/config'
 import { NestFactory } from '@nestjs/core'
 import RedisStore from 'connect-redis'
 import cookieParser from 'cookie-parser'
-import * as session from 'express-session'
+import session from 'express-session'
 import IORedis from 'ioredis'
 
 import { AppModule } from './app.module'
