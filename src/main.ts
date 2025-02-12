@@ -35,7 +35,7 @@ async function bootstrap() {
 	)
 
 	app.use(
-		session({
+		(session as any)({
 			// Настройки управления сессиями с использованием Redis
 			secret: config.getOrThrow<string>('SESSION_SECRET'),
 			name: config.getOrThrow<string>('SESSION_NAME'),
